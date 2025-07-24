@@ -59,7 +59,7 @@ const SignUp = () => {
         <Text className='base-regular text-gray-100'>
           Already have an account?
         </Text>
-        <Link href='/sign-in' className='base-bold text-primary'>
+        <Link href='/sign-in' className='base-bold text-primary mb-10'>
           Sign In
         </Link>
       </View>

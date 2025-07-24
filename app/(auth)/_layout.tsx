@@ -10,10 +10,14 @@ import {
 } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Slot } from 'expo-router'
+import { Redirect, Slot } from 'expo-router'
 import { images } from '@/constants'
 
 export default function _Layout () {
+  const isAuthenticated = true
+
+  // if (isAuthenticated) return <Redirect href='/' />
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
@@ -21,7 +25,7 @@ export default function _Layout () {
     >
       {/* keyboardShouldPersistTaps -> dismessed the keybord automatically when submitted */}
       <ScrollView
-        className='bg-white'
+        className='bg-white h-full'
         keyboardShouldPersistTaps='handled'
       >
         <View
