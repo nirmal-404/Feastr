@@ -6,7 +6,12 @@ export const appwriteConfig = {
   projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
   platform: 'com.nirmal.feastr',
   databaseId : '68815f0a000ec9910040',
+  bucketId : '688327190004d73dfa3a',
   userCollectionId : '68815f490009f4b0896b',
+  categoriesCollectionId : '6883225a0019ba0a8c7c',
+  menuCollectionId : '68832334003d169ccfdf',
+  customizationsCollectionId : '6883250500055691bdaa',
+  menuCustomizationCollectionId : '688325f8003d979a229a',
 }
 
 export const client = new Client();
