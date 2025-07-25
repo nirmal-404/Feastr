@@ -1,4 +1,4 @@
-import { Account, Avatars, Client, Databases, ID, Query } from "react-native-appwrite"
+import { Account, Avatars, Client, Databases, ID, Query, Storage } from "react-native-appwrite"
 import { CreateUserParams, SignInParams } from "@/type";
 
 export const appwriteConfig = {
@@ -11,7 +11,7 @@ export const appwriteConfig = {
   categoriesCollectionId : '6883225a0019ba0a8c7c',
   menuCollectionId : '68832334003d169ccfdf',
   customizationsCollectionId : '6883250500055691bdaa',
-  menuCustomizationCollectionId : '688325f8003d979a229a',
+  menuCustomizationsCollectionId : '688325f8003d979a229a',
 }
 
 export const client = new Client();
@@ -23,6 +23,7 @@ client
 
 export const account = new Account(client);
 export const databases = new Databases(client);
+export const storage = new Storage(client);
 
 const avatars = new Avatars(client);
 
