@@ -7,6 +7,12 @@ export interface User extends Models.Document {
     avatar: string;
 }
 
+interface TabBarIconProps {
+    focused: boolean;
+    icon: ImageSourcePropType;
+    title: string;
+}
+
 interface CustomButtonProps {
     onPress?: () => void;
     title?: string;
