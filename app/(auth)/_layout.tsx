@@ -12,11 +12,12 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Redirect, Slot } from 'expo-router'
 import { images } from '@/constants'
+import useAuthStore from '@/store/auth.store'
 
-export default function _Layout () {
-  const isAuthenticated = true
+export default function AuthLayout () {
+  const { isAuthenticated } = useAuthStore()
 
-  // if (isAuthenticated) return <Redirect href='/' />
+  if (isAuthenticated) return <Redirect href='/' />
 
   return (
     <KeyboardAvoidingView
